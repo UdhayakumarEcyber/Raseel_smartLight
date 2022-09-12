@@ -1,0 +1,37 @@
+{
+    "id": "e66cb051-9e6e-4397-b390-6937d2032979",
+    "author": "",
+    "widgets": [
+        {
+            "id": "smart_lighting",
+            "name": "smart_lighting",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        }
+    ],
+    "sidebarLinks": [
+        {
+            "id": "smart_lightingLink",
+            "label": "",
+            "description": "",
+            "target": "",
+            "icon": "",
+            "roles":[]
+        }
+    ],
+    "uis": [
+        {
+            "id": "smart_lightingLink",
+            "label":"",
+            "description": "",
+            "roles": []
+        }
+    ],
+    "menuItems": [
+        {
+            "id": "smart_lightingLink",
+            "title": "smart_lighting"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": "92465859-fdca-4eeb-c5c4-922e0bf8db56",
+    "author": "Eutech",
+    "widgets": [
+    ],
+    "sidebarLinks": [
+        
+    ],
+    "uis": [
+       {
+            "id": "smart-city-platform",
+            "label": "Raseel Smart City Platform"
+       }
+    ],
+    "menuItems": [
+        
+    ]
+}

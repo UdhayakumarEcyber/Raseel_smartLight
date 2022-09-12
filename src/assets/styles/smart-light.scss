@@ -1,0 +1,564 @@
+.smart_light {
+
+    padding: 15px 10px;
+    border-radius: 0;
+
+    .smart-light-box {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px;
+        min-height: 60px;
+        flex-grow: 0;
+        // background-color: #ffffff;
+        background-color: rgb(0 1 14 / 93%);
+        // background-color: #011217;
+        color: #00000078;
+        width: 25%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+
+        bottom: 2em;
+        left: 2em;
+        z-index: 1;
+        outline: none;
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: 0px;
+            border: 2px solid #40404063;
+            background: linear-gradient(180deg,#e11d5e) border-box;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            // background: linear-gradient(180deg, #8A1538, #20EBCC, #B71742, #C00A3A) border-box;
+            // -webkit-mask:
+            //     linear-gradient(#fff 0 0) padding-box,
+            //     linear-gradient(#fff 0 0);
+            // -webkit-mask-composite: destination-out;
+            // mask:
+            //     linear-gradient(#fff 0 0) padding-box,
+            //     linear-gradient(#fff 0 0);
+            mask-composite: destination-out;
+            mask-composite: exclude;
+            border-radius: 10px;
+            outline: none;
+
+        }
+
+        .smart-light-box-top {
+            display: inline-flex;
+            width: 100%;
+            padding: 15px 15px;
+            border-bottom: 1px solid #ffffff;
+
+            .smart-light-box_lft {
+                display: inline-block;
+                width: 50%;
+
+                h4 {
+                    display: inline-block;
+                    font-size: 1.1em;
+                    // color: rgb(0, 0, 0);
+                    color: #ffffff;
+                }
+            }
+
+            .smart-light-box_rht {
+                display: inline-block;
+                width: 50%;
+
+                .showcase-input {
+                    width: 100% !important;
+                    padding: 0;
+
+                    .uxp-form-select {
+                        min-width: 100%;
+
+                        .uxp-select-placeholder.dynamic-select {
+                            background: #dcdcdc;
+                        }
+
+                        .uxp-select-placeholder.valid:before {
+                            filter: none;
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+        .smart-light-box_details {
+            display: inline-block;
+            width: 100%;
+
+            .data-grid {
+                background-color: transparent;
+                // border: 1px solid #e4e4e463;
+
+                .data-grid-column {
+                    border: 0px solid #77777763;
+                    height: 50%;
+
+                    &:nth-child(odd) {
+                        border-right: 1px solid #ffffff;
+                    }
+
+                    &:first-child {
+                        border-bottom: 1px solid #ffffff;
+                    }
+
+                    &:nth-child(2) {
+                        border-bottom: 1px solid #ffffff;
+                    }
+                }
+
+                .item-card {
+                    background-color: transparent;
+                    display: inline-block;
+
+                    .item-card-image-container {
+                        position: inherit;
+                        transform: none;
+                        left: 0;
+                        top: 0;
+
+                        .profile-image-container {
+                            background-color: transparent !important;
+                            width: 22px;
+                            height: 22px;
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .content {
+                        margin-left: 0;
+                        padding: 5px 0;
+                        text-align: center;
+
+                        .title {
+
+                            h3 {
+                                margin: 0;
+                                padding: 0;
+                                font-weight: 500;
+                                font-size: 1.65em;
+
+                                &.green {
+                                    // color: #4fc8ac82;
+                                    // color: #4FC8AC;
+                                    color: #24e2b6;
+
+
+                                }
+
+                                &.pink {
+                                    // color: #FF5D88;
+                                    color: #ff215d;
+                                }
+
+                                &.orange {
+                                    // color: #FF9A36;
+                                    color: #ff840b;
+                                }
+
+                                span.white {
+                                    color: #574d50;
+                                }
+                            }
+                        }
+
+                        .sub-title {
+                            font-size: 9px;
+                            padding: 3px 0;
+                            text-transform: uppercase;
+                            line-height: 1.4em;
+                            width: 100%;
+                            // color: rgb(55, 55, 55);
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .transport_map {
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+
+        .transport_map-sec {
+            position: relative;
+            z-index: 0;
+
+            & > #map-component-streetlight {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .light-components {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            z-index: 15;
+
+            .light {
+                display: inline-block;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+
+                &.green-light {
+                    background-image: url(../images/green-light.png);
+                }
+
+                &.dark-red-light {
+                    background-image: url(../images/dark-red-light.png);
+                }
+
+                &.orange-light {
+                    background-image: url(../images/orange-light.png);
+                }
+
+
+            }
+
+            .energy_content {
+                display: none;
+                background-color: #000000;
+                width: 150px;
+                position: absolute;
+                right: 5em;
+                bottom: -5em;
+                border-radius: 10px;
+                padding: 10px;
+
+            }
+
+            .energy_content_toggle {
+                display: block;
+
+                .days {
+                    display: inline-block;
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    color: #ffffff;
+                    font-size: 0.7em;
+                }
+
+                .section-content {
+                    display: inline-block;
+                    width: 100%;
+
+                    .icon {
+                        display: inline-block;
+                    }
+
+                    h5 {
+                        display: inline-block;
+                        width: 100%;
+                        color: #ffffff;
+                        font-size: 1.2em;
+                        padding: 5px 0 5px 0px;
+                        margin: 0;
+                    }
+
+                    p {
+                        color: #ffffff;
+                        font-size: 0.8em;
+                        padding: 5px 0 5px 0px;
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+    .light {
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &.green-light {
+            //background-image: url(https://static.iviva.com/images/uxp-generic-widgets/green-light.png);
+            // background-color: #20ebcc;
+
+            background-color: #008974;
+        }
+
+        &.dark-red-light {
+            // background-image: url(https://static.iviva.com/images/uxp-generic-widgets/dark-red-light.png);
+            background-color: #c00a3a;
+        }
+
+        &.orange-light {
+            // background-image: url(https://static.iviva.com/images/uxp-generic-widgets/orange-light.png);
+            background-color: #ff9a36;
+        }
+
+        &.grey-light {
+            // background-image: url(https://static.iviva.com/images/uxp-generic-widgets/grey-light.png);
+            background-color: #574d50;
+        }
+
+        .bulb-tungsten {
+            background-image: url(https://static.iviva.com/images/uxp-generic-widgets/bulb-tungsten.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            transform: translate(35%, 32%);
+        }
+
+        &.light_action_more {
+            border-radius: 22px 10px 0px 22px;
+        }
+
+
+    }
+
+    // .leaflet-popup-tip {
+    //     background-color: #000000; 
+    // }
+
+    .leaflet-popup-content-wrapper {
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
+
+    .leaflet-popup {
+
+        a.leaflet-popup-close-button {
+            top: 2px;
+            right: -2px;
+            width: 30px;
+            height: 30px;
+            font: 21px/14px Tahoma, Verdana, sans-serif;
+        }
+
+        .leaflet-popup-content-wrapper {
+            // background-color: #000000; 
+            padding: 0;
+            // background: transparent;
+            // box-shadow: none;  
+
+            .leaflet-popup-content {
+                margin: 0;
+            }
+
+            .energy_content {
+                background-color: #ffffff;
+                border-radius: 12px;
+                padding: 13px 19px;
+                // border: 0.001em solid rgb(0 137 116);
+                // border:  0.001em solid #008974;;
+                outline: none;
+
+                .days {
+                    display: inline-block;
+                    position: absolute;
+                    top: 3em;
+                    right: 1em;
+                    color: #000000;
+                    font-size: 0.7em;
+                }
+
+                .section-content {
+                    display: inline-block;
+                    width: 100%;
+
+                    .icon {
+                        //  display: inline-block;
+                        //  position: relative;
+                        //  left: -1em;
+
+                        display: inline-block;
+                        position: relative;
+                        left: -1em;
+                        width: 35px;
+                        height: 35px;
+                        cursor: pointer;
+                        border-radius: 50%;
+
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: 0px;
+                            background-image: url(https://static.iviva.com/images/uxp-generic-widgets/bulb-tungsten.png);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 20px;
+                            height: 20px;
+                            transform: translate(35%, 32%);
+                        }
+                    }
+
+                    h5 {
+                        display: inline-block;
+                        width: 100%;
+                        color: #000000;
+                        font-size: 1.2em;
+                        padding: 5px 0 5px 0px;
+                        margin: 0;
+                    }
+
+                    p {
+                        color: #000000;
+                        font-size: 0.8em;
+                        padding: 5px 0 5px 0px;
+                        margin: 0;
+                    }
+                }
+
+                &.green-energy_content {
+                    border: 0.001em solid #008974;
+
+                    .icon {
+                        background: #008974;
+                    }
+
+
+                }
+
+                &.dark-red-energy_content {
+                    border: 0.001em solid #c00a3a;
+
+                    .icon {
+                        background: #c00a3a;
+                    }
+                }
+
+                &.orange-energy_content {
+                    border: 0.001em solid #ff9a36;
+
+                    .icon {
+                        background: #ff9a36;
+                    }
+                }
+
+                &.grey-energy_content {
+                    border: 0.001em solid #574d50;
+
+                    .icon {
+                        background: #574d50;
+                        ;
+                    }
+                }
+
+            }
+        }
+
+        .lights_more {
+            display: inline-block;
+            margin-top: 1em;
+            width: 100%;
+
+            ul {
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+                li {
+                    display: inline-block;
+                    width: 25%;
+                    text-align: center;
+
+                    .light {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: 0px;
+                            background-image: url(https://static.iviva.com/images/uxp-generic-widgets/bulb-tungsten.png);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 20px;
+                            height: 20px;
+                            transform: translate(35%, 32%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .more_section {
+
+        .light {
+
+            .bulb-tungsten {
+                background-size: contain;
+            }
+
+        }
+
+        .more-content {
+            color: #fff;
+            background: #008974;
+            border-radius: 0px 22px 22px 0px;
+            padding: 10px 0 9px 0;
+            width: 5.8em;
+            text-align: center;
+            position: absolute;
+            left: 24px;
+            font-size: 0.9em;
+            top: 0px;
+        }
+    }
+
+
+
+    // .uxp-form-select .uxp-select-placeholder.dynamic-select {
+    //     background: #999999;
+    // }
+    // .uxp-form-select .uxp-select-placeholder .selected { 
+    //     color: #000;
+    // }
+
+    #uxp-map-component-container {
+        background: #2c2e31;
+    }
+}
